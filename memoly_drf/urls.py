@@ -20,11 +20,14 @@ from django.urls import path, include
 from rest_framework import routers
 
 from assessment import views
+from assessment.grading.scenario import GradeScenario
 
 router = routers.DefaultRouter()
 
 urlpatterns = [
     path("", include(router.urls)),
     path("assessment/", views.AssessmentView.as_view(), name="assessment"),
+    path("assessment/grade-short-answer/", views.GradeShortAnswer.as_view(), name="grade-short-answer"),
+    path("assessment/grade-scenario/", GradeScenario.as_view(), name="grade-scenario"),
     path("admin/", admin.site.urls),
 ]

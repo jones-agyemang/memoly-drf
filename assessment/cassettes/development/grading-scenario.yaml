@@ -1,0 +1,1185 @@
+interactions:
+- request:
+    body: '{"input":"\n            A scenario with the following title \"Preparing
+      a Fruit Report\" and description \"A shop needs three reports from the same
+      basket data\n            have been given to a user. The scenario is supported
+      by the following evidence: basket = [''pear'', ''apple'', ''orange''].\n\n            The
+      user is presented with several analysis. \n            Analysis: [{''question_number'':
+      12, ''question'': ''Write three loops that produce the requested reports. Use
+      `sorted()`, `sorted(set(...))`, and `reversed()` as appropriate.'', ''user_response'':
+      ''```python basket_a = sorted(basket)```'', ''scenario_grade_guide'': {''expected_answer'':
+      ''```pythonfor fruit in sorted(basket):    print(fruit)for fruit in sorted(set(basket)):    print(fruit)for
+      fruit in reversed(basket):    print(fruit)```'', ''accepted_alternatives'':
+      [''Equivalent loops that use `sorted(basket)`, `sorted(set(basket))`, and `reversed(basket)`
+      without mutating `basket`.'']}}]\n            The analysis summary contains
+      information about question_number, question (based on the given scenario),\n            user_response
+      is the user''s response to the question based on this scenario, and a scenario_grade_guide
+      \n            contains grading guidance to help you evaluate the correctness
+      of each analysis.\n\n            Evaluate the quality of the responses through
+      the lens of the respective criteria coverage.\n            Provide an assessment
+      score for each criteria on a continuous scale of 0 to 1,\n            where
+      0 indicates no score and 1 indicates an extremely excellent score.\n            A
+      score is excellent if it is closely aligned to the model score and the given
+      criteria.\n            Base your marking/grading scheme on each analysis''s
+      accepted_alternatives.\n\n            The expected_answer field holds the model,
+      perfect or ideal answer.\n            Provide a final headline assessment i.e.\n            for
+      an extremely excellent score you can respond with \"Perfect response\",\n            for
+      a poor response you can respond wuth \"Inadequate\" response.\n            These
+      examples serves as guides to help you facilitate judgement.\n            Additionally,
+      provide a rationale for your assessment i.e. \"You covered most of the key ideas\"
+      \n        ","model":"gpt-5.6","text":{"format":{"type":"json_schema","name":"grade_scenario","schema":{"type":"object","properties":{"analysis":{"type":"array","description":"One
+      grading result for each analysis in the request.","items":{"type":"object","properties":{"question_number":{"type":"integer","minimum":1,"description":"The
+      question_number from the corresponding analysis in the request."},"criteria_scores":{"type":"array","description":"Scores
+      for the criteria derived from this analysis''s accepted_alternatives, using
+      expected_answer as the ideal answer. Equivalent accepted alternatives are valid
+      ways to satisfy a criterion, not separate requirements the user must all meet.","items":{"type":"object","properties":{"criterion":{"type":"string","description":"The
+      grading criterion being assessed."},"score":{"type":"number","minimum":0,"maximum":1,"description":"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage)."}},"required":["criterion","score"],"additionalProperties":false}}},"required":["question_number","criteria_scores"],"additionalProperties":false}},"headline_assessment":{"type":"string","description":"A
+      concise final assessment across all analysis responses, such as ''Perfect response''
+      or ''Inadequate response''."},"rationale":{"type":"string","description":"A
+      concise explanation of the final assessment, covering strengths and gaps relative
+      to each analysis''s expected_answer and accepted_alternatives."}},"required":["analysis","headline_assessment","rationale"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '3827'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a4765e7a2a8a132e-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Thu, 08 Oct 2026 16:02:23 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '5821'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=eIzjad3I8cNcNgMFJJEP_A9ElkMekjx4QmSp6arO2Ec-1791475337.310983-1.0.1.1-5SaUkGUaZ2EVeaThj7hOGlJBPgFbSt_HnTl9WoYM908d2UKXQJ9WhZmOHU5itT2hXaekI9jcaRLgD6Ej_oNov81LYuPrMLHOJ4Niyu7uwYccy2H4QAfhAHxv98.5cRqa;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Thu,
+        08 Oct 2026 16:32:23 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '999831'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 10ms
+      x-request-id:
+      - req_20fcd90f94aa4782ae53ab2a18e450a1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"input":"\n            A scenario with the following title \"Comparing
+      Course Enrollments\" and description \"A school tracks students enrolled in
+      Python and Java courses.\n            have been given to a user. The scenario
+      is supported by the following evidence: ```python\npython_students = {\"Ana\",
+      \"Bo\", \"Chen\", \"Dia\"}\njava_students = {\"Bo\", \"Dia\", \"Eli\"}\n```.\n\n            The
+      user is presented with several analysis. \n            Analysis: [{''question_number'':
+      1, ''question'': ''Which expression finds students taking both courses, and
+      what is its result?'', ''user_response'': ''python_students & java_students
+      = {\"Bo\", \"Dia\"}'', ''scenario_grade_guide'': {''expected_answer'': ''Use
+      `python_students & java_students`. The result is `{\"Bo\", \"Dia\"}`.'', ''accepted_alternatives'':
+      [''`java_students & python_students` with the same result.'', ''Using the `.intersection()`
+      method with the same result.'']}}, {''question_number'': 2, ''question'': ''Which
+      expression finds students taking exactly one of the two courses, and what is
+      its result?'', ''user_response'': ''python_students ^ java_students = {\"Ana\",
+      \"Chen\", \"Eli\"}'', ''scenario_grade_guide'': {''expected_answer'': ''Use
+      `python_students ^ java_students`. The result is `{\"Ana\", \"Chen\", \"Eli\"}`.'',
+      ''accepted_alternatives'': [''`java_students ^ python_students` with the same
+      result.'', ''Using the `.symmetric_difference()` method with the same result.'']}},
+      {''question_number'': 3, ''question'': ''Which expression finds students taking
+      Python but not Java, and what is its result?'', ''user_response'': ''python_students
+      & `java_students = {\"Ana\", \"Chen\"}'', ''scenario_grade_guide'': {''expected_answer'':
+      ''Use `python_students - java_students`. The result is `{\"Ana\", \"Chen\"}`.'',
+      ''accepted_alternatives'': [''Using `python_students.difference(java_students)`
+      with the same result.'']}}]\n            The analysis summary contains information
+      about question_number, question (based on the given scenario),\n            user_response
+      is the user''s response to the question based on this scenario, and a scenario_grade_guide
+      \n            contains grading guidance to help you evaluate the correctness
+      of each analysis.\n\n            Evaluate the quality of the responses through
+      the lens of the respective criteria coverage.\n            Provide an assessment
+      score for each criteria on a continuous scale of 0 to 1,\n            where
+      0 indicates no score and 1 indicates an extremely excellent score.\n            A
+      score is excellent if it is closely aligned to the model score and the given
+      criteria.\n            Base your marking/grading scheme on each analysis''s
+      accepted_alternatives.\n\n            The expected_answer field holds the model,
+      perfect or ideal answer.\n            Provide a final headline assessment i.e.\n            for
+      an extremely excellent score you can respond with \"Perfect response\",\n            for
+      a poor response you can respond wuth \"Inadequate\" response.\n            These
+      examples serves as guides to help you facilitate judgement.\n            Additionally,
+      provide a rationale for your assessment i.e. \"You covered most of the key ideas\"
+      \n        ","model":"gpt-5.6","text":{"format":{"type":"json_schema","name":"grade_scenario","schema":{"type":"object","properties":{"analysis":{"type":"array","description":"One
+      grading result for each analysis in the request.","items":{"type":"object","properties":{"question_number":{"type":"integer","minimum":1,"description":"The
+      question_number from the corresponding analysis in the request."},"criteria_scores":{"type":"array","description":"Scores
+      for the criteria derived from this analysis''s accepted_alternatives, using
+      expected_answer as the ideal answer. Equivalent accepted alternatives are valid
+      ways to satisfy a criterion, not separate requirements the user must all meet.","items":{"type":"object","properties":{"criterion":{"type":"string","description":"The
+      grading criterion being assessed."},"score":{"type":"number","minimum":0,"maximum":1,"description":"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage)."}},"required":["criterion","score"],"additionalProperties":false}}},"required":["question_number","criteria_scores"],"additionalProperties":false}},"headline_assessment":{"type":"string","description":"A
+      concise final assessment across all analysis responses, such as ''Perfect response''
+      or ''Inadequate response''."},"rationale":{"type":"string","description":"A
+      concise explanation of the final assessment, covering strengths and gaps relative
+      to each analysis''s expected_answer and accepted_alternatives."}},"required":["analysis","headline_assessment","rationale"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '4733'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a476c14aeace6400-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Thu, 08 Oct 2026 17:09:50 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '5762'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=B38bysDhC5e44_VlQpLfCoxgzapS0ewVYBKzuuOIhzk-1791479384.7913895-1.0.1.1-L7zwzWRfvanKO8kM_YmwiYE2VmJgz8IHWRoj3jGwgDz_xO_TwfDAfERZGmjCOG.suesR._txszpPA5ixQKG2TpbzUd9IOrMbhZulkMYauBkC7bsCYI8Kh1juleNDuEo.;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Thu,
+        08 Oct 2026 17:39:50 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '999783'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 13ms
+      x-request-id:
+      - req_f8f5dace9c7b45ea9352598662f49e59
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"input":"\n            A scenario with the following title \"Comparing
+      Course Enrollments\" and description \"A school tracks students enrolled in
+      Python and Java courses.\n            have been given to a user. The scenario
+      is supported by the following evidence: ```python\npython_students = {\"Ana\",
+      \"Bo\", \"Chen\", \"Dia\"}\njava_students = {\"Bo\", \"Dia\", \"Eli\"}\n```.\n\n            The
+      user is presented with several analysis. \n            Analysis: [{''question_number'':
+      1, ''question'': ''Which expression finds students taking both courses, and
+      what is its result?'', ''user_response'': ''python_students & java_students
+      = {\"Bo\", \"Dia\"}'', ''scenario_grade_guide'': {''expected_answer'': ''Use
+      `python_students & java_students`. The result is `{\"Bo\", \"Dia\"}`.'', ''accepted_alternatives'':
+      [''`java_students & python_students` with the same result.'', ''Using the `.intersection()`
+      method with the same result.'']}}, {''question_number'': 2, ''question'': ''Which
+      expression finds students taking exactly one of the two courses, and what is
+      its result?'', ''user_response'': ''python_students ^ java_students = {\"Ana\",
+      \"Chen\", \"Eli\"}'', ''scenario_grade_guide'': {''expected_answer'': ''Use
+      `python_students ^ java_students`. The result is `{\"Ana\", \"Chen\", \"Eli\"}`.'',
+      ''accepted_alternatives'': [''`java_students ^ python_students` with the same
+      result.'', ''Using the `.symmetric_difference()` method with the same result.'']}},
+      {''question_number'': 3, ''question'': ''Which expression finds students taking
+      Python but not Java, and what is its result?'', ''user_response'': ''python_students
+      - java_students = {\"Ana\", \"Chen\"}'', ''scenario_grade_guide'': {''expected_answer'':
+      ''Use `python_students - java_students`. The result is `{\"Ana\", \"Chen\"}`.'',
+      ''accepted_alternatives'': [''Using `python_students.difference(java_students)`
+      with the same result.'']}}]\n            The analysis summary contains information
+      about question_number, question (based on the given scenario),\n            user_response
+      is the user''s response to the question based on this scenario, and a scenario_grade_guide
+      \n            contains grading guidance to help you evaluate the correctness
+      of each analysis.\n\n            Evaluate the quality of the responses through
+      the lens of the respective criteria coverage.\n            Provide an assessment
+      score for each criteria on a continuous scale of 0 to 1,\n            where
+      0 indicates no score and 1 indicates an extremely excellent score.\n            A
+      score is excellent if it is closely aligned to the model score and the given
+      criteria.\n            Base your marking/grading scheme on each analysis''s
+      accepted_alternatives.\n\n            The expected_answer field holds the model,
+      perfect or ideal answer.\n            Provide a final headline assessment i.e.\n            for
+      an extremely excellent score you can respond with \"Perfect response\",\n            for
+      a poor response you can respond wuth \"Inadequate\" response.\n            These
+      examples serves as guides to help you facilitate judgement.\n            Additionally,
+      provide a rationale for your assessment i.e. \"You covered most of the key ideas\"
+      \n        ","model":"gpt-5.6","text":{"format":{"type":"json_schema","name":"grade_scenario","schema":{"type":"object","properties":{"analysis":{"type":"array","description":"One
+      grading result for each analysis in the request.","items":{"type":"object","properties":{"question_number":{"type":"integer","minimum":1,"description":"The
+      question_number from the corresponding analysis in the request."},"criteria_scores":{"type":"array","description":"Scores
+      for the criteria derived from this analysis''s accepted_alternatives, using
+      expected_answer as the ideal answer. Equivalent accepted alternatives are valid
+      ways to satisfy a criterion, not separate requirements the user must all meet.","items":{"type":"object","properties":{"criterion":{"type":"string","description":"The
+      grading criterion being assessed."},"score":{"type":"number","minimum":0,"maximum":1,"description":"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage)."}},"required":["criterion","score"],"additionalProperties":false}}},"required":["question_number","criteria_scores"],"additionalProperties":false}},"headline_assessment":{"type":"string","description":"A
+      concise final assessment across all analysis responses, such as ''Perfect response''
+      or ''Inadequate response''."},"rationale":{"type":"string","description":"A
+      concise explanation of the final assessment, covering strengths and gaps relative
+      to each analysis''s expected_answer and accepted_alternatives."}},"required":["analysis","headline_assessment","rationale"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '4732'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+        euc5zU7/A4/fijdPFQAA
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a4782e2e3c0de908-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Thu, 08 Oct 2026 21:18:55 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '3448'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=fwU011X5A_sEkD3mgAeO5ouyoBW6oh1S1A9EANuBGv8-1791494330.5962372-1.0.1.1-owIQ3RhJ_ZCFb0yVxhVgZ.eVUtWAEZ1P.huMq8ZSlbSr8GIfZJSdNjnWaZGuzhDs_GOcSngPxfrr5NM3mOOWxEVm9r_gYQ1.Z8coF08gGdq0qMQR4nVq8KqLCS9jH0t4;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Thu,
+        08 Oct 2026 21:48:55 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '999973'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 1ms
+      x-request-id:
+      - req_0160d7887e4a43b88ed2bf3763be2b44
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"input":"\n            A scenario with the following title \"Filtering
+      Product Codes\" and description \"A product code contains repeated characters.
+      You need unique numeric characters, excluding zero.\n            have been given
+      to a user. The scenario is supported by the following evidence: ```python\ncode
+      = \"A10220B31\"\n```.\n\n            The user is presented with several analysis.
+      \n            Analysis: [{''question_number'': 1, ''question'': ''Write a set
+      comprehension that extracts the unique characters that are digits and are not
+      `\"0\"`.'', ''user_response'': ''{char for char in code if instanceof(char,
+      int) & char != \"0\"}'', ''scenario_grade_guide'': {''expected_answer'': ''```python\\n{x
+      for x in code if x.isdigit() and x != \"0\"}\\n```'', ''accepted_alternatives'':
+      [''```python\\n{x for x in code if x in \"123456789\"}\\n```'', ''Any equivalent
+      set comprehension that keeps nonzero digit characters.'']}}, {''question_number'':
+      2, ''question'': ''What set does your comprehension produce?'', ''user_response'':
+      ''The set produces, 123'', ''scenario_grade_guide'': {''expected_answer'': ''The
+      result is `{\"1\", \"2\", \"3\"}` in unspecified order.'', ''accepted_alternatives'':
+      [''Any ordering of the string elements `\"1\"`, `\"2\"`, and `\"3\"`.'']}},
+      {''question_number'': 3, ''question'': ''Why does the character `\"2\"` appear
+      only once in the result even though it occurs twice in `code`?'', ''user_response'':
+      ''Sets enforces membership uniqueness'', ''scenario_grade_guide'': {''expected_answer'':
+      ''The character `\"2\"` appears once because a set stores each distinct value
+      only once, automatically eliminating duplicates.'', ''accepted_alternatives'':
+      [''Any explanation that correctly identifies set uniqueness or duplicate elimination.'']}}]\n            The
+      analysis summary contains information about question_number, question (based
+      on the given scenario),\n            user_response is the user''s response to
+      the question based on this scenario, and a scenario_grade_guide \n            contains
+      grading guidance to help you evaluate the correctness of each analysis.\n\n            Evaluate
+      the quality of the responses through the lens of the respective criteria coverage.\n            Provide
+      an assessment score for each criteria on a continuous scale of 0 to 1,\n            where
+      0 indicates no score and 1 indicates an extremely excellent score.\n            A
+      score is excellent if it is closely aligned to the model score and the given
+      criteria.\n            Base your marking/grading scheme on each analysis''s
+      accepted_alternatives.\n\n            The expected_answer field holds the model,
+      perfect or ideal answer.\n            Provide a final headline assessment i.e.\n            for
+      an extremely excellent score you can respond with \"Perfect response\",\n            for
+      a poor response you can respond wuth \"Inadequate\" response.\n            These
+      examples serves as guides to help you facilitate judgement.\n            Additionally,
+      provide a rationale for your assessment i.e. \"You covered most of the key ideas\"
+      \n        ","model":"gpt-5.6","text":{"format":{"type":"json_schema","name":"grade_scenario","schema":{"type":"object","properties":{"analysis":{"type":"array","description":"One
+      grading result for each analysis in the request.","items":{"type":"object","properties":{"question_number":{"type":"integer","minimum":1,"description":"The
+      question_number from the corresponding analysis in the request."},"criteria_scores":{"type":"array","description":"Scores
+      for the criteria derived from this analysis''s accepted_alternatives, using
+      expected_answer as the ideal answer. Equivalent accepted alternatives are valid
+      ways to satisfy a criterion, not separate requirements the user must all meet.","items":{"type":"object","properties":{"criterion":{"type":"string","description":"The
+      grading criterion being assessed."},"score":{"type":"number","minimum":0,"maximum":1,"description":"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage)."}},"required":["criterion","score"],"additionalProperties":false}}},"required":["question_number","criteria_scores"],"additionalProperties":false}},"headline_assessment":{"type":"string","description":"A
+      concise final assessment across all analysis responses, such as ''Perfect response''
+      or ''Inadequate response''."},"rationale":{"type":"string","description":"A
+      concise explanation of the final assessment, covering strengths and gaps relative
+      to each analysis''s expected_answer and accepted_alternatives."}},"required":["analysis","headline_assessment","rationale"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '4609'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+        AAA=
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a478388e991f940f-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Thu, 08 Oct 2026 21:25:59 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '3763'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=4LtxM7HdYeNfeDz7bjVCbwyJgPzK4US9yAFl13aICXY-1791494755.61691-1.0.1.1-r8gWDsiZwpdKF6JgapvjYN7GC4cOTVdRtSA1YIaZlN7FFwL5x5rgivrK_Mi3YvSS7OpXY2eMF3atKuhW5zll0qfY55hLyuzjSOKgoFwKyRIrBUH4GIJbYO71tZ1nGJ3c;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Thu,
+        08 Oct 2026 21:55:59 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '999837'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 9ms
+      x-request-id:
+      - req_c278b77809f44280afe99849bdf15801
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"input":"\n            A scenario with the following title \"Debugging
+      Reversed Clauses\" and description \"A developer wants to flatten a matrix but
+      writes the clauses in the wrong order.\n            have been given to a user.
+      The scenario is supported by the following evidence: ```python\nmatrix = [[10,
+      20], [30, 40]]\nflat = [number for number in row for row in matrix]\n```.\n\n            The
+      user is presented with several analysis. \n            Analysis: [{''question_number'':
+      1, ''question'': ''Assuming `row` was not previously defined, what happens when
+      this code runs, and why?'', ''user_response'': ''It will raise a `NameError`
+      exception'', ''scenario_grade_guide'': {''expected_answer'': ''The code raises
+      a `NameError` because Python tries to evaluate `for number in row` before the
+      comprehension has assigned `row`. The later clause `for row in matrix` cannot
+      provide a variable to an earlier clause.'', ''accepted_alternatives'': [''It
+      fails because `row` is referenced before it is defined.'', \"It raises `NameError:
+      name ''row'' is not defined`, assuming no outer variable named `row` exists.\"]}},
+      {''question_number'': 2, ''question'': ''Correct the comprehension and state
+      the resulting value of `flat`.'', ''user_response'': ''```python\\nmatrix =
+      [[10, 20], [30, 40]]\\nflat = [number for row in matrix for number in matrix]\\nflat=[10,
+      20, 30, 40]\\n```'', ''scenario_grade_guide'': {''expected_answer'': ''```python\\nflat
+      = [number for row in matrix for number in row]\\n```\\n\\nThe result is `[10,
+      20, 30, 40]`.'', ''accepted_alternatives'': [''`[item for row in matrix for
+      item in row]`'', ''An equivalent expanded nested loop that produces `[10, 20,
+      30, 40]`.'']}}]\n            The analysis summary contains information about
+      question_number, question (based on the given scenario),\n            user_response
+      is the user''s response to the question based on this scenario, and a scenario_grade_guide
+      \n            contains grading guidance to help you evaluate the correctness
+      of each analysis.\n\n            Evaluate the quality of the responses through
+      the lens of the respective criteria coverage.\n            Provide an assessment
+      score for each criteria on a continuous scale of 0 to 1,\n            where
+      0 indicates no score and 1 indicates an extremely excellent score.\n            A
+      score is excellent if it is closely aligned to the model score and the given
+      criteria.\n            Base your marking/grading scheme on each analysis''s
+      accepted_alternatives.\n\n            The expected_answer field holds the model,
+      perfect or ideal answer.\n            Provide a final headline assessment i.e.\n            for
+      an extremely excellent score you can respond with \"Perfect response\",\n            for
+      a poor response you can respond wuth \"Inadequate\" response.\n            These
+      examples serves as guides to help you facilitate judgement.\n            Additionally,
+      provide a rationale for your assessment i.e. \"You covered most of the key ideas\"
+      \n        ","model":"gpt-5.6","text":{"format":{"type":"json_schema","name":"grade_scenario","schema":{"type":"object","properties":{"analysis":{"type":"array","description":"One
+      grading result for each analysis in the request.","items":{"type":"object","properties":{"question_number":{"type":"integer","minimum":1,"description":"The
+      question_number from the corresponding analysis in the request."},"criteria_scores":{"type":"array","description":"Scores
+      for the criteria derived from this analysis''s accepted_alternatives, using
+      expected_answer as the ideal answer. Equivalent accepted alternatives are valid
+      ways to satisfy a criterion, not separate requirements the user must all meet.","items":{"type":"object","properties":{"criterion":{"type":"string","description":"The
+      grading criterion being assessed."},"score":{"type":"number","minimum":0,"maximum":1,"description":"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage)."}},"required":["criterion","score"],"additionalProperties":false}}},"required":["question_number","criteria_scores"],"additionalProperties":false}},"headline_assessment":{"type":"string","description":"A
+      concise final assessment across all analysis responses, such as ''Perfect response''
+      or ''Inadequate response''."},"rationale":{"type":"string","description":"A
+      concise explanation of the final assessment, covering strengths and gaps relative
+      to each analysis''s expected_answer and accepted_alternatives."}},"required":["analysis","headline_assessment","rationale"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '4542'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+        AA==
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a47c4a5cde84ef13-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Fri, 09 Oct 2026 09:17:15 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '7026'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=IDYS4ktxlCrXIvA5pJKCrV7EOSjn9lu9wPRgJqXm6Ts-1791537427.975788-1.0.1.1-k2hNL4hXoUo5mGKbFxkgwiG4E0819QsA0W3xhGokezJDgI45GAp_D6v9h4D_aXOhdROrz4FhAA7hDaATJHD2SfdoiZIdtKcZ4oXYiHHQN8ZZHgfRu3PwJo8RuPB6eXMC;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Fri,
+        09 Oct 2026 09:47:15 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '999645'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 21ms
+      x-request-id:
+      - req_01a1debc112c474eb25fb7ea3f3d32a1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"input":"\n            A scenario with the following title \"Filtering
+      While Flattening\" and description \"A program must flatten nested data, ignore
+      empty rows, retain only positive numbers, and double each retained number.\n            have
+      been given to a user. The scenario is supported by the following evidence: ```python\ndata
+      = [[1, -2, 3], [], [4, 4]]\nresult = [n * 2 for row in data if row for n in
+      row if n > 0]\n```.\n\n            The user is presented with several analysis.
+      \n            Analysis: [{''question_number'': 1, ''question'': ''What is the
+      value of `result`? Show the order of the values.'', ''user_response'': ''result
+      == [2, 6, 8, 8]'', ''scenario_grade_guide'': {''expected_answer'': ''`result`
+      is `[2, 6, 8, 8]`. The positive source values are `1`, `3`, `4`, and `4`, and
+      each is doubled in traversal order.'', ''accepted_alternatives'': [''`[2, 6,
+      8, 8]`'']}}, {''question_number'': 2, ''question'': ''Rewrite the comprehension
+      as equivalent expanded statements, preserving the exact clause order and behavior.'',
+      ''user_response'': ''```python\\nresult = []\\nfor row in data:\\n    if row:\\n        for
+      n in row:\\n            if n > 0:\\n                result.append(n * 2)\\n```'',
+      ''scenario_grade_guide'': {''expected_answer'': ''```python\\nresult = []\\nfor
+      row in data:\\n    if row:\\n        for n in row:\\n            if n > 0:\\n                result.append(n
+      * 2)\\n```'', ''accepted_alternatives'': [''Equivalent expanded code with the
+      same nesting, conditions, transformation, and output order.'', ''Omitting `if
+      row` is behaviorally equivalent for this particular list because iterating over
+      an empty row does nothing, but full credit for exact translation requires retaining
+      it.'']}}]\n            The analysis summary contains information about question_number,
+      question (based on the given scenario),\n            user_response is the user''s
+      response to the question based on this scenario, and a scenario_grade_guide
+      \n            contains grading guidance to help you evaluate the correctness
+      of each analysis.\n\n            Evaluate the quality of the responses through
+      the lens of the respective criteria coverage.\n            Provide an assessment
+      score for each criteria on a continuous scale of 0 to 1,\n            where
+      0 indicates no score and 1 indicates an extremely excellent score.\n            A
+      score is excellent if it is closely aligned to the model score and the given
+      criteria.\n            Base your marking/grading scheme on each analysis''s
+      accepted_alternatives.\n\n            The expected_answer field holds the model,
+      perfect or ideal answer.\n            Provide a final headline assessment i.e.\n            for
+      an extremely excellent score you can respond with \"Perfect response\",\n            for
+      a poor response you can respond wuth \"Inadequate\" response.\n            These
+      examples serves as guides to help you facilitate judgement.\n            Additionally,
+      provide a rationale for your assessment i.e. \"You covered most of the key ideas\"
+      \n        ","model":"gpt-5.6","text":{"format":{"type":"json_schema","name":"grade_scenario","schema":{"type":"object","properties":{"analysis":{"type":"array","description":"One
+      grading result for each analysis in the request.","items":{"type":"object","properties":{"question_number":{"type":"integer","minimum":1,"description":"The
+      question_number from the corresponding analysis in the request."},"criteria_scores":{"type":"array","description":"Scores
+      for the criteria derived from this analysis''s accepted_alternatives, using
+      expected_answer as the ideal answer. Equivalent accepted alternatives are valid
+      ways to satisfy a criterion, not separate requirements the user must all meet.","items":{"type":"object","properties":{"criterion":{"type":"string","description":"The
+      grading criterion being assessed."},"score":{"type":"number","minimum":0,"maximum":1,"description":"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage)."}},"required":["criterion","score"],"additionalProperties":false}}},"required":["question_number","criteria_scores"],"additionalProperties":false}},"headline_assessment":{"type":"string","description":"A
+      concise final assessment across all analysis responses, such as ''Perfect response''
+      or ''Inadequate response''."},"rationale":{"type":"string","description":"A
+      concise explanation of the final assessment, covering strengths and gaps relative
+      to each analysis''s expected_answer and accepted_alternatives."}},"required":["analysis","headline_assessment","rationale"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '4582'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+        J7PAFAAA
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a47c4faaeb6fb86a-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Fri, 09 Oct 2026 09:20:47 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '2487'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=piKoaDJX5WNqcgLxPL9SvhU0RqKYI1CIxyUY2NHvcg8-1791537645.2710605-1.0.1.1-EZq4ZRdREUfdZURfw_AVNsBZLXnRT1L.6jNhFbHjIXDNggoaEA8snuceWZrL5e8r2HRWXlU_7hYmvDe_sJJ0IRyQhOY6rdKvl1ULNhJA5R1eY_7wdJNFyb297CNy4SDB;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Fri,
+        09 Oct 2026 09:50:47 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '1000000'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_777c347d7c8d41629c0220e98b94bc66
+    status:
+      code: 200
+      message: OK
+version: 1

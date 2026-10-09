@@ -6,7 +6,7 @@ class Dig():
 
         head, *tail = keys
 
-        if not isinstance(data, dict): return None
+        if not isinstance(data, dict): return default
 
         result = data.get(head, default)
 
