@@ -139,7 +139,10 @@ class AssessmentView(APIView):
             )
 
         response_data = json.loads(model_result.output_text)
-        response_data["metadata"]["original_source"] = topic
+
+        if response_data.get("metadata"):
+            response_data["metadata"]["original_source"] = topic
+
         return Response(
             data=response_data,
             status=status.HTTP_201_CREATED

@@ -78,9 +78,12 @@ def test_view_exposes_and_sends_composed_schema(mocker):
     assert response.data == {}
     mock_openai.return_value.responses.create.assert_called_once_with(
         model="gpt-5.6",
-        input=(
-            "Create a skill assessment based on: "
-            "{'topic': 'The Kubernetes control plane manages clusters'}"
-        ),
+        input=mocker.ANY,
         text=ASSESSMENT_RESPONSE_SCHEMA,
+    )
+    call_kwargs = mock_openai.return_value.responses.create.call_args.kwargs
+    assert call_kwargs["text"] is ASSESSMENT_RESPONSE_SCHEMA
+    assert call_kwargs["input"].strip().startswith(
+        "Create a skill assessment based on: "
+        "{'topic': 'The Kubernetes control plane manages clusters'}"
     )

@@ -4339,4 +4339,374 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: "{\"input\":\"\\n                Review the following response It's unsafe
+      because it's assigning values without using an explicit allow-list. This raises
+      the risk of a mass assignment attack to the following question Explain why the
+      following code is unsafe, and name the class of vulnerability it may introduce.\\n\\n```ruby\\ndef
+      create\\n  Person.create(params[:person])\\nend\\n```.\\n                Evaluate
+      the quality of the response through the lens of this criteria coverage.\\n\\n
+      \               Provide an assessment score for each critera on a continuous
+      scale of 0 to 1,\\n                where 0 indicates no score and 1 indicates
+      an extremely excellent score.\\n                A score is excellent if it is
+      closely aligned to the model score and the given criteria.\\n                Base
+      your marking/grading scheme through the following accepted points The request
+      data is untrusted.,No attribute allow-list is applied.,A client could assign
+      sensitive fields such as `admin`, `role`, or `account_id`.,Identifies mass assignment
+      or parameter tampering as the vulnerability..\\n\\n                This is the
+      model, perfect or ideal answer The action sends request-controlled data directly
+      into mass assignment. A client could add sensitive model attributes that the
+      form did not expose, producing a mass-assignment or parameter-tampering vulnerability..\\n
+      \               Provide a final headline assessment i.e.\\n                for
+      an extremely excellent score you can respond with \u201CPerfect response\u201D,\\n
+      \               for a poor response you can respond with \u201CInadequate\u201D
+      response.\\n                These examples serves as guides to help you facilitate
+      judgement.\\n                Additionally, provide a rationale for your assessment
+      i.e. \u201CYou covered most of the key ideas\u201D\\n            \",\"model\":\"gpt-5.6\",\"text\":{\"format\":{\"type\":\"json_schema\",\"name\":\"grade_short_answer\",\"schema\":{\"type\":\"object\",\"properties\":{\"criteria_scores\":{\"type\":\"array\",\"description\":\"A
+      score for each accepted point used to grade the answer.\",\"items\":{\"type\":\"object\",\"properties\":{\"criterion\":{\"type\":\"string\",\"description\":\"The
+      accepted point being assessed.\"},\"score\":{\"type\":\"number\",\"minimum\":0,\"maximum\":1,\"description\":\"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage).\"}},\"required\":[\"criterion\",\"score\"],\"additionalProperties\":false}},\"headline_assessment\":{\"type\":\"string\",\"description\":\"A
+      concise overall assessment, such as 'Perfect response' or 'Inadequate response'.\"},\"rationale\":{\"type\":\"string\",\"description\":\"A
+      concise explanation of the assessment based on the model answer and accepted
+      points.\"}},\"required\":[\"criteria_scores\",\"headline_assessment\",\"rationale\"],\"additionalProperties\":false},\"strict\":true}}}"
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '2766'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a4805f46484441d6-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Fri, 09 Oct 2026 21:10:31 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '3406'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=vvwKel6O2eqPY4i9VXXWIdvFuLhKv36AN2__YS1UdNw-1791580227.5643415-1.0.1.1-uGjaNrQ4p0IAk3XdN3ntEdJRVBgZuV8SkPRLmNKuSqHjtVFU9JdawYZMrtJbOOCoc3ExLjQ5EJMIUffXS2wa7AlwNVYKryP73Sk1eMgU3uaTt8GEE6C7SOtNqW2bYwDd;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Fri,
+        09 Oct 2026 21:40:31 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '999907'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 5ms
+      x-request-id:
+      - req_bb7a42ae0b9c4c56ad3009dbdee66efa
+    status:
+      code: 200
+      message: OK
+- request:
+    body: "{\"input\":\"\\n                Review the following response ```ruby\\ndef
+      person_params\\n  params.expect(person: [:name, :age, :email])\\n``` to the
+      following question Write a private `person_params` method using `params.expect`.
+      It must accept only `name`, `age`, and `email` under the required `person` key..\\n
+      \               Evaluate the quality of the response through the lens of this
+      criteria coverage.\\n\\n                Provide an assessment score for each
+      critera on a continuous scale of 0 to 1,\\n                where 0 indicates
+      no score and 1 indicates an extremely excellent score.\\n                A score
+      is excellent if it is closely aligned to the model score and the given criteria.\\n
+      \               Base your marking/grading scheme through the following accepted
+      points Defines a `person_params` method.,Uses `params.expect`.,Requires the
+      `person` structure.,Allows only `name`, `age`, and `email`..\\n\\n                This
+      is the model, perfect or ideal answer ```ruby\\nprivate\\n\\n  def person_params\\n
+      \   params.expect(person: [:name, :age, :email])\\n  end\\n```.\\n                Provide
+      a final headline assessment i.e.\\n                for an extremely excellent
+      score you can respond with \u201CPerfect response\u201D,\\n                for
+      a poor response you can respond with \u201CInadequate\u201D response.\\n                These
+      examples serves as guides to help you facilitate judgement.\\n                Additionally,
+      provide a rationale for your assessment i.e. \u201CYou covered most of the key
+      ideas\u201D\\n            \",\"model\":\"gpt-5.6\",\"text\":{\"format\":{\"type\":\"json_schema\",\"name\":\"grade_short_answer\",\"schema\":{\"type\":\"object\",\"properties\":{\"criteria_scores\":{\"type\":\"array\",\"description\":\"A
+      score for each accepted point used to grade the answer.\",\"items\":{\"type\":\"object\",\"properties\":{\"criterion\":{\"type\":\"string\",\"description\":\"The
+      accepted point being assessed.\"},\"score\":{\"type\":\"number\",\"minimum\":0,\"maximum\":1,\"description\":\"How
+      well the response covers the criterion, from 0 (not covered) to 1 (excellent
+      coverage).\"}},\"required\":[\"criterion\",\"score\"],\"additionalProperties\":false}},\"headline_assessment\":{\"type\":\"string\",\"description\":\"A
+      concise overall assessment, such as 'Perfect response' or 'Inadequate response'.\"},\"rationale\":{\"type\":\"string\",\"description\":\"A
+      concise explanation of the assessment based on the model answer and accepted
+      points.\"}},\"required\":[\"criteria_scores\",\"headline_assessment\",\"rationale\"],\"additionalProperties\":false},\"strict\":true}}}"
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '2493'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 3.7.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 3.7.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.16
+    method: POST
+    uri: https://api.openai.com/v1/responses
+  response:
+    body:
+      string: !!binary |
+        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
+        ExoAAA==
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      - CF-Ray
+      - CF-Ray
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - a48063f059203238-LHR
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json
+      date:
+      - Fri, 09 Oct 2026 21:13:42 GMT
+      openai-organization:
+      - user-xlzivmxiqqqylndbjt1wcikq
+      openai-processing-ms:
+      - '3227'
+      openai-project:
+      - proj_lfb19RuyT21hrZID5S5UHpBH
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Sj7vuwLknhdbDkpIv2NVQ0ADjzBU0BIs21niyUBncsU-1791580418.6201363-1.0.1.1-kWpJrL5DIbhjJu9KZfZtLD3AMVmqxj16YzCuDoPjMmD6uRJ_BrSAGn.1HAEct6t7OUc27guXcdcT8yLoZ5UaWN.CxUtpargTXYumtk_puBGLnVJW6cn6cjPDb.Bx4xxK;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=api.openai.com; Expires=Fri,
+        09 Oct 2026 21:43:42 GMT
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '1000000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '999934'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 3ms
+      x-request-id:
+      - req_a9dc8cbc8e044fa5ad51da18af973692
+    status:
+      code: 200
+      message: OK
 version: 1
